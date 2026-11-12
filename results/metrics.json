@@ -1,0 +1,50 @@
+{
+  "schema": "public_diffusion_metrics.v1",
+  "direction": "All three metrics are lower-is-better.",
+  "kid": {
+    "features": "TF-FID-compatible Inception features, 2048 dimensions",
+    "kernel": "(x dot y / feature_dimension + 1)^3",
+    "estimator": "Unbiased polynomial MMD squared, averaged across 50 fixed subsets",
+    "subsets": 50,
+    "subset_size": 256,
+    "subset_random_seed": 9317,
+    "units": "raw KID, not multiplied by 1000",
+    "preprocessing": "Clamp images to [-1,1], quantize to 8-bit using the historical display transform, then extract features.",
+    "uncertainty_note": "Subset mean/std describe the metric calculation; they are not training-seed averages or confidence intervals."
+  },
+  "lowpass_swd": {
+    "features": "Adaptive average pooling to 8x8 RGB, flattened to 192 dimensions",
+    "random_unit_projections": 64,
+    "projection_seed": 31415,
+    "quantiles": 128,
+    "estimator": "Mean absolute difference of projected quantiles, a sliced-W1 approximation"
+  },
+  "patch_swd": {
+    "features": "Nonoverlapping 4x4 RGB patches, flattened to 48 dimensions",
+    "max_patches_per_set": 4096,
+    "patch_selection_seed": 27182,
+    "random_unit_projections": 64,
+    "projection_seed": 31415,
+    "quantiles": 128,
+    "estimator": "Mean absolute difference of projected quantiles, a sliced-W1 approximation"
+  },
+  "statistics_preprocessing": {
+    "raw": "Original floating-point image values without clipping",
+    "clamp": "Both generated and reference values clamped to [-1,1]",
+    "display8bit": "Both sets pass through the same clamp/8-bit display transform and are mapped back to [-1,1]"
+  },
+  "relative_reduction_percent": "100 * (control_value - candidate_value) / control_value; positive means lower distance.",
+  "scope": "Pixel-statistics diagnostics are not FID, semantic accuracy or direct perceptual sharpness.",
+  "sources": {
+    "quality_implementation": {
+      "path": "diffusion_baseline_audit/quality.py",
+      "sha256": "cdf1c0a2f8352fa79e81c27127ca2cb0277f6c2aeaf04fc61bfbabe1eb279a5c",
+      "path_scope": "original experiment archive, relative to its workspace root"
+    },
+    "statistics_implementation": {
+      "path": "noise_coupled_diffusion/metrics.py",
+      "sha256": "b9e38b5cb72fe50acd623b895a4b236b9f96665a8589522aab888fa3793f0edd",
+      "path_scope": "original experiment archive, relative to its workspace root"
+    }
+  }
+}

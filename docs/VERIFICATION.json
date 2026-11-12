@@ -1,0 +1,50 @@
+{
+  "release": "0.1.0",
+  "date": "2026-11-12",
+  "scope": "CPU software and numerical verification only; no new formal GPU experiment",
+  "environment": {
+    "python": "3.10.20",
+    "torch": "1.13.1+cu116",
+    "numpy": "1.26.4",
+    "Pillow": "12.2.0"
+  },
+  "public_unittest": {
+    "tests": 16,
+    "failures": 0,
+    "errors": 0,
+    "command": "python -m unittest discover -s tests -v"
+  },
+  "package_build": {
+    "wheel_build": "passed",
+    "required_modules_present": true
+  },
+  "verified_behaviors": [
+    "Haar round-trip and energy preservation",
+    "v-target decoding at clean/noise endpoints",
+    "Zero-initialized conditional model agrees with dense within float32 tolerance",
+    "Noise-dependent coefficients and algebraic convolution fusion",
+    "Two differentiable student calls and four no-gradient teacher calls",
+    "Original Adam base/delta parameter groups",
+    "Finite DDIM sampling",
+    "Unbiased polynomial kernel calculation and reproducible subset selection",
+    "Cross-process synthetic trajectory resume: model, EMA, optimizer, teacher and RNG exactly equal",
+    "Parent dense EMA migration to zero-delta conditional model",
+    "Verified CIFAR checksum checked before unpickling",
+    "Existing outputs and changed resume configurations rejected",
+    "PNG and raw NCHW output connected to evaluation"
+  ],
+  "original_core_checks": {
+    "core_and_three_vendor_files_byte_identical": true,
+    "initial_parameters_match_original_models": true,
+    "span4_and_span8_losses_and_student_gradients_match_original_CPU": true,
+    "teacher_gradients_absent": true
+  },
+  "excluded": [
+    "datasets",
+    "historical checkpoints",
+    "pretrained Inception weights",
+    "thesis documents",
+    "account credentials",
+    "resume copy"
+  ]
+}

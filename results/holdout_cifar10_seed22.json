@@ -1,0 +1,811 @@
+{
+  "schema": "public_diffusion_results.v1",
+  "kind": "historical_evaluation_export",
+  "dataset": "CIFAR-10",
+  "reference": {
+    "split": "official test_batch",
+    "images": 1024,
+    "index_seed": 20261110
+  },
+  "selection": {
+    "uses_test_scores": false,
+    "models_locked_before_test_image_evaluation": true,
+    "training_seed": 22,
+    "new_variants_rule": "final EMA/DDIM31 development A KID; legacy controls previously fixed at seed22"
+  },
+  "training_seed_averages_computed": false,
+  "evaluation_conditions": 20,
+  "sources": {
+    "holdout_summary": {
+      "path": "thesis_validation_experiments/runs/validation_20261110/holdout/summary.json",
+      "sha256": "78346b2a926cdbac738a0412a75cbf6c7cdd6bb9bf94eba240eac5a882263fa4",
+      "path_scope": "original experiment archive, relative to its workspace root"
+    }
+  },
+  "rows": [
+    {
+      "variant": "baseline",
+      "training_seed": 22,
+      "bank": "holdout_e",
+      "generation_seed_base": 11491000,
+      "weights": "ema",
+      "sampler": "ddim",
+      "nfe": 31,
+      "generation_batch": 32,
+      "generated_images": 1024,
+      "reference_images": 1024,
+      "kid": {
+        "mean": 0.04082488619500022,
+        "subset_std": 0.002924833379262296,
+        "subsets": 50,
+        "subset_size": 256,
+        "seed": 9317
+      },
+      "statistics": {
+        "raw": {
+          "lowpass_swd": 0.06613429419141312,
+          "patch_swd": 0.07663930725423418
+        },
+        "clamp": {
+          "lowpass_swd": 0.06633364100243865,
+          "patch_swd": 0.07673714184867991
+        },
+        "display8bit": {
+          "lowpass_swd": 0.06632062623997119,
+          "patch_swd": 0.07672781056883257
+        }
+      },
+      "source_id": "holdout_summary"
+    },
+    {
+      "variant": "baseline",
+      "training_seed": 22,
+      "bank": "holdout_f",
+      "generation_seed_base": 11591000,
+      "weights": "ema",
+      "sampler": "ddim",
+      "nfe": 31,
+      "generation_batch": 32,
+      "generated_images": 1024,
+      "reference_images": 1024,
+      "kid": {
+        "mean": 0.038388240383376446,
+        "subset_std": 0.0027612862227061165,
+        "subsets": 50,
+        "subset_size": 256,
+        "seed": 9317
+      },
+      "statistics": {
+        "raw": {
+          "lowpass_swd": 0.06468318634200673,
+          "patch_swd": 0.07459546627962318
+        },
+        "clamp": {
+          "lowpass_swd": 0.06482904036863228,
+          "patch_swd": 0.0746875323373048
+        },
+        "display8bit": {
+          "lowpass_swd": 0.06483284304676389,
+          "patch_swd": 0.07467742328234792
+        }
+      },
+      "source_id": "holdout_summary"
+    },
+    {
+      "variant": "structure",
+      "training_seed": 22,
+      "bank": "holdout_e",
+      "generation_seed_base": 11491000,
+      "weights": "ema",
+      "sampler": "ddim",
+      "nfe": 31,
+      "generation_batch": 32,
+      "generated_images": 1024,
+      "reference_images": 1024,
+      "kid": {
+        "mean": 0.03728186132378605,
+        "subset_std": 0.002916252885072566,
+        "subsets": 50,
+        "subset_size": 256,
+        "seed": 9317
+      },
+      "statistics": {
+        "raw": {
+          "lowpass_swd": 0.06528148433685187,
+          "patch_swd": 0.07647861011745241
+        },
+        "clamp": {
+          "lowpass_swd": 0.06541383792455775,
+          "patch_swd": 0.07654541636483428
+        },
+        "display8bit": {
+          "lowpass_swd": 0.06540557128837214,
+          "patch_swd": 0.07655483549577452
+        }
+      },
+      "source_id": "holdout_summary"
+    },
+    {
+      "variant": "structure",
+      "training_seed": 22,
+      "bank": "holdout_f",
+      "generation_seed_base": 11591000,
+      "weights": "ema",
+      "sampler": "ddim",
+      "nfe": 31,
+      "generation_batch": 32,
+      "generated_images": 1024,
+      "reference_images": 1024,
+      "kid": {
+        "mean": 0.03644080122613699,
+        "subset_std": 0.00258154152544012,
+        "subsets": 50,
+        "subset_size": 256,
+        "seed": 9317
+      },
+      "statistics": {
+        "raw": {
+          "lowpass_swd": 0.06371153124263843,
+          "patch_swd": 0.07387951630536299
+        },
+        "clamp": {
+          "lowpass_swd": 0.06383775385554559,
+          "patch_swd": 0.07395365341538924
+        },
+        "display8bit": {
+          "lowpass_swd": 0.06384140465296113,
+          "patch_swd": 0.07394220498762516
+        }
+      },
+      "source_id": "holdout_summary"
+    },
+    {
+      "variant": "trajectory",
+      "training_seed": 22,
+      "bank": "holdout_e",
+      "generation_seed_base": 11491000,
+      "weights": "ema",
+      "sampler": "ddim",
+      "nfe": 31,
+      "generation_batch": 32,
+      "generated_images": 1024,
+      "reference_images": 1024,
+      "kid": {
+        "mean": 0.04104774927326791,
+        "subset_std": 0.0029167378417310464,
+        "subsets": 50,
+        "subset_size": 256,
+        "seed": 9317
+      },
+      "statistics": {
+        "raw": {
+          "lowpass_swd": 0.06430860085685192,
+          "patch_swd": 0.0744540972611716
+        },
+        "clamp": {
+          "lowpass_swd": 0.06450943683800028,
+          "patch_swd": 0.07455279861792274
+        },
+        "display8bit": {
+          "lowpass_swd": 0.0645060473748651,
+          "patch_swd": 0.07453723314856375
+        }
+      },
+      "source_id": "holdout_summary"
+    },
+    {
+      "variant": "trajectory",
+      "training_seed": 22,
+      "bank": "holdout_f",
+      "generation_seed_base": 11591000,
+      "weights": "ema",
+      "sampler": "ddim",
+      "nfe": 31,
+      "generation_batch": 32,
+      "generated_images": 1024,
+      "reference_images": 1024,
+      "kid": {
+        "mean": 0.03852221041728066,
+        "subset_std": 0.002771970652626342,
+        "subsets": 50,
+        "subset_size": 256,
+        "seed": 9317
+      },
+      "statistics": {
+        "raw": {
+          "lowpass_swd": 0.06285711588955317,
+          "patch_swd": 0.07242905121208833
+        },
+        "clamp": {
+          "lowpass_swd": 0.06300459478655662,
+          "patch_swd": 0.07253023098356012
+        },
+        "display8bit": {
+          "lowpass_swd": 0.06300354612360196,
+          "patch_swd": 0.07251736330031752
+        }
+      },
+      "source_id": "holdout_summary"
+    },
+    {
+      "variant": "combined",
+      "training_seed": 22,
+      "bank": "holdout_e",
+      "generation_seed_base": 11491000,
+      "weights": "ema",
+      "sampler": "ddim",
+      "nfe": 31,
+      "generation_batch": 32,
+      "generated_images": 1024,
+      "reference_images": 1024,
+      "kid": {
+        "mean": 0.03721469006051369,
+        "subset_std": 0.0029280546522501183,
+        "subsets": 50,
+        "subset_size": 256,
+        "seed": 9317
+      },
+      "statistics": {
+        "raw": {
+          "lowpass_swd": 0.06349570824335968,
+          "patch_swd": 0.07442906243359564
+        },
+        "clamp": {
+          "lowpass_swd": 0.06363653271090175,
+          "patch_swd": 0.07450117413936398
+        },
+        "display8bit": {
+          "lowpass_swd": 0.06362746953124122,
+          "patch_swd": 0.07449017792354407
+        }
+      },
+      "source_id": "holdout_summary"
+    },
+    {
+      "variant": "combined",
+      "training_seed": 22,
+      "bank": "holdout_f",
+      "generation_seed_base": 11591000,
+      "weights": "ema",
+      "sampler": "ddim",
+      "nfe": 31,
+      "generation_batch": 32,
+      "generated_images": 1024,
+      "reference_images": 1024,
+      "kid": {
+        "mean": 0.03654664350065211,
+        "subset_std": 0.0025835424228351674,
+        "subsets": 50,
+        "subset_size": 256,
+        "seed": 9317
+      },
+      "statistics": {
+        "raw": {
+          "lowpass_swd": 0.06199887999440069,
+          "patch_swd": 0.07188501592701696
+        },
+        "clamp": {
+          "lowpass_swd": 0.06214358112754215,
+          "patch_swd": 0.07196521348831059
+        },
+        "display8bit": {
+          "lowpass_swd": 0.06214479583704623,
+          "patch_swd": 0.0719554140003589
+        }
+      },
+      "source_id": "holdout_summary"
+    },
+    {
+      "variant": "static_insert",
+      "training_seed": 22,
+      "bank": "holdout_e",
+      "generation_seed_base": 11491000,
+      "weights": "ema",
+      "sampler": "ddim",
+      "nfe": 31,
+      "generation_batch": 32,
+      "generated_images": 1024,
+      "reference_images": 1024,
+      "kid": {
+        "mean": 0.04056580702373459,
+        "subset_std": 0.0029326139200437215,
+        "subsets": 50,
+        "subset_size": 256,
+        "seed": 9317
+      },
+      "statistics": {
+        "raw": {
+          "lowpass_swd": 0.06635134440482439,
+          "patch_swd": 0.07691884157036756
+        },
+        "clamp": {
+          "lowpass_swd": 0.06654677918320569,
+          "patch_swd": 0.07702286422962312
+        },
+        "display8bit": {
+          "lowpass_swd": 0.06653871224082811,
+          "patch_swd": 0.07701352381345898
+        }
+      },
+      "source_id": "holdout_summary"
+    },
+    {
+      "variant": "static_insert",
+      "training_seed": 22,
+      "bank": "holdout_f",
+      "generation_seed_base": 11591000,
+      "weights": "ema",
+      "sampler": "ddim",
+      "nfe": 31,
+      "generation_batch": 32,
+      "generated_images": 1024,
+      "reference_images": 1024,
+      "kid": {
+        "mean": 0.03856872694012279,
+        "subset_std": 0.002766213807677905,
+        "subsets": 50,
+        "subset_size": 256,
+        "seed": 9317
+      },
+      "statistics": {
+        "raw": {
+          "lowpass_swd": 0.06487689857948273,
+          "patch_swd": 0.07485762440741728
+        },
+        "clamp": {
+          "lowpass_swd": 0.06502910307806693,
+          "patch_swd": 0.07495550411757348
+        },
+        "display8bit": {
+          "lowpass_swd": 0.06503060005630626,
+          "patch_swd": 0.0749548165653867
+        }
+      },
+      "source_id": "holdout_summary"
+    },
+    {
+      "variant": "noise_insert",
+      "training_seed": 22,
+      "bank": "holdout_e",
+      "generation_seed_base": 11491000,
+      "weights": "ema",
+      "sampler": "ddim",
+      "nfe": 31,
+      "generation_batch": 32,
+      "generated_images": 1024,
+      "reference_images": 1024,
+      "kid": {
+        "mean": 0.04043075271036572,
+        "subset_std": 0.0028940875909068847,
+        "subsets": 50,
+        "subset_size": 256,
+        "seed": 9317
+      },
+      "statistics": {
+        "raw": {
+          "lowpass_swd": 0.06632237111924259,
+          "patch_swd": 0.07692275047332185
+        },
+        "clamp": {
+          "lowpass_swd": 0.06649617712335915,
+          "patch_swd": 0.0770145243761666
+        },
+        "display8bit": {
+          "lowpass_swd": 0.06650414944742351,
+          "patch_swd": 0.07699112621751247
+        }
+      },
+      "source_id": "holdout_summary"
+    },
+    {
+      "variant": "noise_insert",
+      "training_seed": 22,
+      "bank": "holdout_f",
+      "generation_seed_base": 11591000,
+      "weights": "ema",
+      "sampler": "ddim",
+      "nfe": 31,
+      "generation_batch": 32,
+      "generated_images": 1024,
+      "reference_images": 1024,
+      "kid": {
+        "mean": 0.03826611721850279,
+        "subset_std": 0.0027601252295166323,
+        "subsets": 50,
+        "subset_size": 256,
+        "seed": 9317
+      },
+      "statistics": {
+        "raw": {
+          "lowpass_swd": 0.06487626962885817,
+          "patch_swd": 0.07483358821277995
+        },
+        "clamp": {
+          "lowpass_swd": 0.06502344730619794,
+          "patch_swd": 0.07493079273675499
+        },
+        "display8bit": {
+          "lowpass_swd": 0.06501875108465502,
+          "patch_swd": 0.0749100682922984
+        }
+      },
+      "source_id": "holdout_summary"
+    },
+    {
+      "variant": "wide",
+      "training_seed": 22,
+      "bank": "holdout_e",
+      "generation_seed_base": 11491000,
+      "weights": "ema",
+      "sampler": "ddim",
+      "nfe": 31,
+      "generation_batch": 32,
+      "generated_images": 1024,
+      "reference_images": 1024,
+      "kid": {
+        "mean": 0.04045071013112676,
+        "subset_std": 0.0029414718792307886,
+        "subsets": 50,
+        "subset_size": 256,
+        "seed": 9317
+      },
+      "statistics": {
+        "raw": {
+          "lowpass_swd": 0.0664274883985167,
+          "patch_swd": 0.07696520103576081
+        },
+        "clamp": {
+          "lowpass_swd": 0.06661456339074875,
+          "patch_swd": 0.07705318630086877
+        },
+        "display8bit": {
+          "lowpass_swd": 0.06661379521774227,
+          "patch_swd": 0.07704449237875265
+        }
+      },
+      "source_id": "holdout_summary"
+    },
+    {
+      "variant": "wide",
+      "training_seed": 22,
+      "bank": "holdout_f",
+      "generation_seed_base": 11591000,
+      "weights": "ema",
+      "sampler": "ddim",
+      "nfe": 31,
+      "generation_batch": 32,
+      "generated_images": 1024,
+      "reference_images": 1024,
+      "kid": {
+        "mean": 0.03810822176545807,
+        "subset_std": 0.002801584116770341,
+        "subsets": 50,
+        "subset_size": 256,
+        "seed": 9317
+      },
+      "statistics": {
+        "raw": {
+          "lowpass_swd": 0.06495441434930631,
+          "patch_swd": 0.07497715380609904
+        },
+        "clamp": {
+          "lowpass_swd": 0.06510103050063155,
+          "patch_swd": 0.07507584780236187
+        },
+        "display8bit": {
+          "lowpass_swd": 0.06509715898392829,
+          "patch_swd": 0.0750612172080461
+        }
+      },
+      "source_id": "holdout_summary"
+    },
+    {
+      "variant": "raw_matched",
+      "training_seed": 22,
+      "bank": "holdout_e",
+      "generation_seed_base": 11491000,
+      "weights": "ema",
+      "sampler": "ddim",
+      "nfe": 31,
+      "generation_batch": 32,
+      "generated_images": 1024,
+      "reference_images": 1024,
+      "kid": {
+        "mean": 0.03723173913416398,
+        "subset_std": 0.002925219068398749,
+        "subsets": 50,
+        "subset_size": 256,
+        "seed": 9317
+      },
+      "statistics": {
+        "raw": {
+          "lowpass_swd": 0.06353766110129559,
+          "patch_swd": 0.07446905426343939
+        },
+        "clamp": {
+          "lowpass_swd": 0.06367836645314137,
+          "patch_swd": 0.07454144690464598
+        },
+        "display8bit": {
+          "lowpass_swd": 0.06367170923459237,
+          "patch_swd": 0.07453113987021905
+        }
+      },
+      "source_id": "holdout_summary"
+    },
+    {
+      "variant": "raw_matched",
+      "training_seed": 22,
+      "bank": "holdout_f",
+      "generation_seed_base": 11591000,
+      "weights": "ema",
+      "sampler": "ddim",
+      "nfe": 31,
+      "generation_batch": 32,
+      "generated_images": 1024,
+      "reference_images": 1024,
+      "kid": {
+        "mean": 0.036551197767719604,
+        "subset_std": 0.0025850180711991925,
+        "subsets": 50,
+        "subset_size": 256,
+        "seed": 9317
+      },
+      "statistics": {
+        "raw": {
+          "lowpass_swd": 0.06203927871293348,
+          "patch_swd": 0.07192461783599911
+        },
+        "clamp": {
+          "lowpass_swd": 0.062183169350241964,
+          "patch_swd": 0.07200499278267572
+        },
+        "display8bit": {
+          "lowpass_swd": 0.0621840188166698,
+          "patch_swd": 0.07200082370097846
+        }
+      },
+      "source_id": "holdout_summary"
+    },
+    {
+      "variant": "span8",
+      "training_seed": 22,
+      "bank": "holdout_e",
+      "generation_seed_base": 11491000,
+      "weights": "ema",
+      "sampler": "ddim",
+      "nfe": 31,
+      "generation_batch": 32,
+      "generated_images": 1024,
+      "reference_images": 1024,
+      "kid": {
+        "mean": 0.03727029985182253,
+        "subset_std": 0.00291149450292856,
+        "subsets": 50,
+        "subset_size": 256,
+        "seed": 9317
+      },
+      "statistics": {
+        "raw": {
+          "lowpass_swd": 0.06198399902129563,
+          "patch_swd": 0.07257101436230882
+        },
+        "clamp": {
+          "lowpass_swd": 0.062127733801403025,
+          "patch_swd": 0.07264673232398963
+        },
+        "display8bit": {
+          "lowpass_swd": 0.062133430458797004,
+          "patch_swd": 0.07263459534449428
+        }
+      },
+      "source_id": "holdout_summary"
+    },
+    {
+      "variant": "span8",
+      "training_seed": 22,
+      "bank": "holdout_f",
+      "generation_seed_base": 11591000,
+      "weights": "ema",
+      "sampler": "ddim",
+      "nfe": 31,
+      "generation_batch": 32,
+      "generated_images": 1024,
+      "reference_images": 1024,
+      "kid": {
+        "mean": 0.03661778880170854,
+        "subset_std": 0.002594403369749115,
+        "subsets": 50,
+        "subset_size": 256,
+        "seed": 9317
+      },
+      "statistics": {
+        "raw": {
+          "lowpass_swd": 0.06047719279646544,
+          "patch_swd": 0.06999576133788502
+        },
+        "clamp": {
+          "lowpass_swd": 0.060627648385501415,
+          "patch_swd": 0.0700803700681864
+        },
+        "display8bit": {
+          "lowpass_swd": 0.06062607406885169,
+          "patch_swd": 0.0700781846929431
+        }
+      },
+      "source_id": "holdout_summary"
+    },
+    {
+      "variant": "weight003",
+      "training_seed": 22,
+      "bank": "holdout_e",
+      "generation_seed_base": 11491000,
+      "weights": "ema",
+      "sampler": "ddim",
+      "nfe": 31,
+      "generation_batch": 32,
+      "generated_images": 1024,
+      "reference_images": 1024,
+      "kid": {
+        "mean": 0.03726472027935708,
+        "subset_std": 0.002907356716644703,
+        "subsets": 50,
+        "subset_size": 256,
+        "seed": 9317
+      },
+      "statistics": {
+        "raw": {
+          "lowpass_swd": 0.06476442756221326,
+          "patch_swd": 0.07587590514413037
+        },
+        "clamp": {
+          "lowpass_swd": 0.06489944834246515,
+          "patch_swd": 0.0759430419756716
+        },
+        "display8bit": {
+          "lowpass_swd": 0.0648998596868621,
+          "patch_swd": 0.075941728025556
+        }
+      },
+      "source_id": "holdout_summary"
+    },
+    {
+      "variant": "weight003",
+      "training_seed": 22,
+      "bank": "holdout_f",
+      "generation_seed_base": 11591000,
+      "weights": "ema",
+      "sampler": "ddim",
+      "nfe": 31,
+      "generation_batch": 32,
+      "generated_images": 1024,
+      "reference_images": 1024,
+      "kid": {
+        "mean": 0.036446425777181816,
+        "subset_std": 0.0025887287418056024,
+        "subsets": 50,
+        "subset_size": 256,
+        "seed": 9317
+      },
+      "statistics": {
+        "raw": {
+          "lowpass_swd": 0.06321986021053982,
+          "patch_swd": 0.07330856193867344
+        },
+        "clamp": {
+          "lowpass_swd": 0.06335450987070901,
+          "patch_swd": 0.07338207080417687
+        },
+        "display8bit": {
+          "lowpass_swd": 0.06335623224821883,
+          "patch_swd": 0.07338091297862834
+        }
+      },
+      "source_id": "holdout_summary"
+    }
+  ],
+  "primary_comparisons": [
+    {
+      "candidate": "structure",
+      "control": "baseline",
+      "bank": "holdout_e",
+      "training_seed": 22,
+      "statistic_preprocessing": "raw",
+      "relative_reduction_percent": {
+        "kid": 8.678590931744175,
+        "lowpass_swd": 1.2895122946242616,
+        "patch_swd": 0.2096797877474154
+      }
+    },
+    {
+      "candidate": "structure",
+      "control": "baseline",
+      "bank": "holdout_f",
+      "training_seed": 22,
+      "statistic_preprocessing": "raw",
+      "relative_reduction_percent": {
+        "kid": 5.073009697216461,
+        "lowpass_swd": 1.502175687868506,
+        "patch_swd": 0.9597767933729852
+      }
+    },
+    {
+      "candidate": "trajectory",
+      "control": "baseline",
+      "bank": "holdout_e",
+      "training_seed": 22,
+      "statistic_preprocessing": "raw",
+      "relative_reduction_percent": {
+        "kid": -0.5459000600838944,
+        "lowpass_swd": 2.7605848930315635,
+        "patch_swd": 2.8512914212724114
+      }
+    },
+    {
+      "candidate": "trajectory",
+      "control": "baseline",
+      "bank": "holdout_f",
+      "training_seed": 22,
+      "statistic_preprocessing": "raw",
+      "relative_reduction_percent": {
+        "kid": -0.3489871704623141,
+        "lowpass_swd": 2.8230991015166924,
+        "patch_swd": 2.9042181456631564
+      }
+    },
+    {
+      "candidate": "combined",
+      "control": "baseline",
+      "bank": "holdout_e",
+      "training_seed": 22,
+      "statistic_preprocessing": "raw",
+      "relative_reduction_percent": {
+        "kid": 8.843126021815257,
+        "lowpass_swd": 3.9897393331462125,
+        "patch_swd": 2.8839572013699684
+      }
+    },
+    {
+      "candidate": "combined",
+      "control": "baseline",
+      "bank": "holdout_f",
+      "training_seed": 22,
+      "statistic_preprocessing": "raw",
+      "relative_reduction_percent": {
+        "kid": 4.797294338924218,
+        "lowpass_swd": 4.149929061028331,
+        "patch_swd": 3.6335322879356053
+      }
+    },
+    {
+      "candidate": "combined",
+      "control": "structure",
+      "bank": "holdout_e",
+      "training_seed": 22,
+      "statistic_preprocessing": "raw",
+      "relative_reduction_percent": {
+        "kid": 0.18017143159508614,
+        "lowpass_swd": 2.7355016688615725,
+        "patch_swd": 2.6798966151570647
+      }
+    },
+    {
+      "candidate": "combined",
+      "control": "structure",
+      "bank": "holdout_f",
+      "training_seed": 22,
+      "statistic_preprocessing": "raw",
+      "relative_reduction_percent": {
+        "kid": -0.2904499104130537,
+        "lowpass_swd": 2.688133866560659,
+        "patch_swd": 2.6996662648713747
+      }
+    }
+  ],
+  "limitations": [
+    "Independent real-reference evaluation within CIFAR-10, not a second dataset.",
+    "Historical model checkpoints are not bundled; these are exported recorded results, not fresh runs of the portable package.",
+    "KID subset_std is not uncertainty across training seeds and is not a confidence interval.",
+    "Low-frequency and patch distances are pixel-statistics diagnostics, not a direct measure of perceptual sharpness."
+  ]
+}

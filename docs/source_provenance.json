@@ -1,0 +1,53 @@
+{
+  "description": "Original local research sources used for this portable release. Paths are provenance labels, not runtime dependencies.",
+  "source_files": [
+    {
+      "path": "noise_coupled_diffusion/core.py",
+      "sha256": "ad3823a68845e4a6c870760ddb14f8219a7cbc67f0307b9a9e4ead4b844c3682"
+    },
+    {
+      "path": "diffusion_baseline_audit/models.py",
+      "sha256": "0300ec063fe98f7f247269d6b15abb717c049ddde4a6464ee306746f5a2a94d4"
+    },
+    {
+      "path": "time_kernel_prototype/model.py",
+      "sha256": "c7c15521f5d65b14657c6d8fa4e06a45df0258ed2feb76eaa9bc3198af31ee66"
+    },
+    {
+      "path": "time_kernel_training/model.py",
+      "sha256": "ec3c96c74604faa23eb0969ce34067056d1fa1512719947eb2e9621a34992c64"
+    },
+    {
+      "path": "thesis_validation_experiments/models.py",
+      "sha256": "94d0d1916acb5d4cb0a21284056010e56a15ed9a1c7689dbcc8c1c20094702a1"
+    },
+    {
+      "path": "short_trajectory_training/objective.py",
+      "sha256": "84a1b87b55b822fc42985d115d77755b2874176aec8c4ba550d9eb3ec999a8fc"
+    },
+    {
+      "path": "thesis_validation_experiments/objectives.py",
+      "sha256": "8779b9a15fa68e9535cb3f4dde65b5a4bf37ff65efd434eed2c990c0eec066fc"
+    },
+    {
+      "path": "noise_coupled_diffusion/metrics.py",
+      "sha256": "b9e38b5cb72fe50acd623b895a4b236b9f96665a8589522aab888fa3793f0edd"
+    },
+    {
+      "path": "diffusion_baseline_audit/quality.py",
+      "sha256": "cdf1c0a2f8352fa79e81c27127ca2cb0277f6c2aeaf04fc61bfbabe1eb279a5c"
+    },
+    {
+      "path": "timestep_allocation/vendor/Adaptive-Timestep-Sampler/ddpm_torch/functions.py",
+      "sha256": "e07bb0582db4611f7467a05763a2493b53799a438cce09d244eff6712aba5db8"
+    },
+    {
+      "path": "timestep_allocation/vendor/Adaptive-Timestep-Sampler/ddpm_torch/modules.py",
+      "sha256": "92d7089b1c81b22289ab600eb92569450c9891098037b1595fd089503ff608dc"
+    },
+    {
+      "path": "timestep_allocation/vendor/Adaptive-Timestep-Sampler/ddpm_torch/models/unet.py",
+      "sha256": "9b224f339442662bc892af46ac6ab9ab48e0866192eb08e145682a9f2ed53cc0"
+    }
+  ]
+}

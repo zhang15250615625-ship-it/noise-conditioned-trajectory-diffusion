@@ -1,0 +1,5 @@
+# Environment used for the release CPU verification; not a universal CUDA lock.
+# Install the appropriate PyTorch build for your OS and GPU separately if needed.
+torch==1.13.1
+numpy==1.26.4
+Pillow==12.2.0
